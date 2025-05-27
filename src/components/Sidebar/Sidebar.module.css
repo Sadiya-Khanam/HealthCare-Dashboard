@@ -36,7 +36,6 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1;
 }
 
 .navItem {
@@ -46,12 +45,13 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
+  margin-bottom: 4px; /* Add some spacing between items */
 }
 
 .navLink {
-  text-decoration: none; 
-  color: inherit; 
-  display: flex; 
+  text-decoration: none;
+  color: inherit;
+  display: flex;
   align-items: center;
   width: 100%;
 }
@@ -59,6 +59,7 @@
 .active {
   color: #000000;
   font-weight: 700;
+  background-color: #e0f2fe; /* Add a background for active state */
 }
 
 .active .icon {
@@ -89,4 +90,101 @@
 
 .label {
   font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e5e7eb;
+    border-right: none;
+    padding: 10px;
+    position: sticky; /* Make it stick to the top */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure it's above other content */
+    background-color: #f9fafb;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: space-between; /* Distribute title and navs */
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .header {
+    display: none; /* Hide headers in horizontal layout */
+  }
+
+  nav {
+    margin: 0;
+  }
+
+  .navList {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navItem {
+    padding: 8px 12px;
+    margin-bottom: 0;
+  }
+
+  .navLink {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon {
+    margin-right: 0;
+    margin-bottom: 4px;
+    font-size: 20px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .active {
+    border-radius: 6px;
+    background-color: #d1fae5;
+    color: #10b981;
+    font-weight: 600;
+  }
+
+  .active .icon {
+    color: #10b981;
+  }
+
+  .inactive {
+    color: #4b5563;
+  }
+
+  .inactive .icon {
+    color: #6b7280;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .navItem {
+    padding: 6px 8px;
+  }
 }
