@@ -1,0 +1,78 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.bodyWrapper {
+  position: relative;
+  
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyImage {
+  width: 70%;
+  max-width: 350px;
+  height: auto;
+}
+
+/* Common label styles */
+.label {
+  position: absolute;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* Heart label */
+.heart {
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: purple;
+  color: white;
+}
+
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid purple;
+}
+
+/* Leg label */
+.leg {
+  top: 420px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: skyblue;
+  color: black;
+}
+
+.leg::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid skyblue;
+}

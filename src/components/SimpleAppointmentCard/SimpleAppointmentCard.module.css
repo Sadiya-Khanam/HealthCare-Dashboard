@@ -1,0 +1,64 @@
+.card {
+  flex: 0 0 48%;         
+  min-width: 240px;      
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #cbc4f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  word-break: break-word; 
+  box-sizing: border-box;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  word-wrap: break-word;
+  flex-grow: 1; 
+}
+
+.titleEmoji {
+  font-size: 1.2rem; 
+  margin-left: 0.5rem; 
+  flex-shrink: 0; 
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  word-wrap: break-word; 
+}
+
+.time {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Tablet view: stack cards */
+
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 100%;      /* Stack cards on small screens */
+  }
+}

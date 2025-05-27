@@ -1,0 +1,47 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+   width: 100%; 
+}
+
+.anatomyWrapper {
+  display: flex;
+  flex-direction: column;  
+  gap: 16px;
+  flex: 1;
+}
+
+
+/* Top Row: 3 Columns (Anatomy + Health Cards + Calendar) */
+.topRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Middle Row: Activity Feed Full Width BELOW Anatomy + Health */
+.middleRow {
+display: block;
+  
+width: 100% !important;
+
+}
+
+.activityRow {
+   flex-grow: 1; 
+     width: 100% !important;      /* full width */
+ 
+  box-sizing: border-box;
+}
+
+
+
+
+/* Responsive Fix */
+@media (max-width: 1024px) {
+  .topRow {
+    grid-template-columns: 1fr;
+  }
+}

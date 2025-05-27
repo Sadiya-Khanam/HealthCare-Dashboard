@@ -1,0 +1,92 @@
+.sidebar {
+  width: 220px;
+  background-color: #f9fafb;
+  padding: 20px;
+  border-right: 1px solid #e5e7eb;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 24px;
+  user-select: none;
+}
+
+.health {
+  color: #38bdf8;
+}
+
+.care {
+  color: #a855f7;
+  margin-left: 0;
+}
+
+.header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navLink {
+  text-decoration: none; 
+  color: inherit; 
+  display: flex; 
+  align-items: center;
+  width: 100%;
+}
+
+.active {
+  color: #000000;
+  font-weight: 700;
+}
+
+.active .icon {
+  color: #000000;
+}
+
+.inactive {
+  color: #9ca3af;
+}
+
+.inactive .icon {
+  color: #b4bbbe;
+}
+
+.navItem:hover {
+  background-color: #e0f2fe;
+  color: #000000 !important;
+}
+
+.navItem:hover .icon {
+  color: #000000 !important;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+.label {
+  font-size: 16px;
+}

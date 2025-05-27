@@ -1,0 +1,192 @@
+.container {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #333;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Header with month left and controls right */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Profile pic placeholder */
+.profilePic {
+  width: 40px;
+  height: 40px;
+  background-color: #999;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+/* Blue plus button */
+.addButton {
+  background-color: #4339f2;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #3326c1;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.dayColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+
+.dayLabel {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.slots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.timeSlot {
+  background-color: #f1f3f5;
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.timeSlot:hover {
+  background-color: #e0e2e5;
+}
+
+.selected {
+  background-color: #4339f2;
+  color: white;
+  font-weight: 600;
+}
+
+.appointments {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  color: white;
+  border-radius: 1.2rem;
+  padding: 1rem;
+  flex: 1;
+  min-width: 220px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardDentist {
+  background-color: #5a189a; 
+}
+
+.cardPhysio {
+  background-color: #cbc4f0;;
+  color: #333; 
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.titleEmoji {
+  font-size: 1.2rem;
+}
+
+.cardTime,
+.cardDoctor {
+  font-size: 0.85rem;
+}
+
+.upcomingScheduleWrapper {
+  margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calendarGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .profilePic {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .addButton {
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+  }
+
+  .calendarGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
