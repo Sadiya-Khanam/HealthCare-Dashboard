@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './ActivityFeed.module.css';
 
 const ActivityFeed = () => {
-  // Multiple data points per day
   const activityData = [
     { day: 'Mon', values: [20, 10, 5] },
     { day: 'Tues', values: [30, 25, 25] },
