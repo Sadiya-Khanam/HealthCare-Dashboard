@@ -12,20 +12,19 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1.2rem;
-  color:black
+  color: black
 }
 
 .dayGroup {
   display: flex;
-  flex-wrap: wrap;       /* Allow wrapping */
-  gap: 1rem;             /* Space between cards */
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-bottom: 1.5rem;
-  justify-content: flex-start; /* Align cards to start */
-  
+  justify-content: flex-start;
 }
 
 .dayTitle {
-  width: 100%;           /* Title takes full width */
+  width: 100%;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.6rem;

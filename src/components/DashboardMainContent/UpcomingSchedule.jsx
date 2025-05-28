@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./UpcomingSchedule.module.css";
 import SimpleAppointmentCard from "../SimpleAppointmentCard/SimpleAppointmentCard";
-import upcomingAppointments from "../../data/upcoming"; // Import the data
+import upcomingAppointments from "../../data/upcoming";
 
 const UpcomingSchedule = () => {
-  // Group appointments by day
+
   const appointmentsByDay = upcomingAppointments.reduce((acc, appointment) => {
     if (!acc[appointment.day]) {
       acc[appointment.day] = [];
@@ -23,9 +23,9 @@ const UpcomingSchedule = () => {
           {appointments.map((appt) => (
             <SimpleAppointmentCard
               key={appt.id}
-              title={appt.title} // Pass the title
+              title={appt.title}
               time={appt.time}
-              icon={appt.icon}   // Pass the emoji as the icon prop
+              icon={appt.icon}
             />
           ))}
         </div>

@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./CalendarView.module.css";
 import UpcomingSchedule from './UpcomingSchedule';
-import { calendarViewDays, calendarViewTimes, appointmentsData } from '../../data/appointments'; 
+import { calendarViewDays, calendarViewTimes, appointmentsData } from '../../data/appointments';
 
 const CalendarView = () => {
   return (
     <div className={styles.container}>
       {/* Header */}
       <div className={styles.header}>
-        <span className={styles.monthText}>October 2021</span> {/* Update month if needed */}
+        <span className={styles.monthText}>October 2021</span>
         <div className={styles.headerRight}>
           <div className={styles.profilePic}>JD</div>
           <button className={styles.addButton} aria-label="Add event">+</button>

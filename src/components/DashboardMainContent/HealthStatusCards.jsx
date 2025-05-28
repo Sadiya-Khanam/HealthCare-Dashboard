@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./HealthStatusCards.module.css";
-import healthIndicators from "../../data/healthStatus"; 
+import healthIndicators from "../../data/healthStatus";
 
-const HealthStatusCards = ({ indicators }) => {             // Receive 'indicators' as a prop
+const HealthStatusCards = ({ indicators }) => {
   return (
     <div className={styles.container}>
       {indicators.map((indicator) => (
@@ -21,8 +21,8 @@ const HealthStatusCards = ({ indicators }) => {             // Receive 'indicato
                 width: `${indicator.progress}%`,
                 backgroundColor:
                   indicator.status === 'good' ? '#3BE09B' :
-                  indicator.status === 'average' ? '#FFA76B' :
-                  indicator.status === 'low' ? '#FF6B6B' : '#ccc' 
+                    indicator.status === 'average' ? '#FFA76B' :
+                      indicator.status === 'low' ? '#FF6B6B' : '#ccc'
               }}
             />
           </div>

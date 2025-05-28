@@ -24,7 +24,8 @@
 
 .mainContentGrid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1.2fr; /* 3-column layout */
+  grid-template-columns: 1fr 1.5fr 1.2fr;
+  /* 3-column layout */
   grid-template-rows: auto auto;
   gap: 1rem;
   align-items: start;
@@ -42,12 +43,12 @@
 
 .gridItemHealthCards {
   grid-column: 2 / 3;
-  grid-row: 1 ;
+  grid-row: 1;
 }
 
 .gridItemCalendar {
   grid-column: 3 / 4;
-  grid-row: 1 ;
+  grid-row: 1;
 }
 
 .activityHeader {
@@ -102,38 +103,38 @@
 /* Second Row: ActivityFeed */
 .activityFeedRow {
   grid-column: 1 / 4;
-  grid-row: 2 ;
+  grid-row: 2;
 }
 
 /* Responsive: Tablet */
 @media (max-width: 1024px) {
   .mainContentGrid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto; /* Ensure enough rows */
+    grid-template-rows: auto auto auto auto;
   }
 
   .gridItemAnatomy {
     grid-column: 1 / 2;
-    grid-row: 1 / 2; /* Explicitly place Anatomy in the first row */
-    min-width: 0; /* Allow it to take full width */
+    grid-row: 1 / 2;
+    min-width: 0;
   }
 
   .gridItemHealthCards {
     grid-column: 1 / 2;
-    grid-row: 2 / 3; /* Place Health Cards below Anatomy */
+    grid-row: 2 / 3;
     min-width: 0;
-    max-width: 100%; /* Allow full width */
+    max-width: 100%;
   }
 
   .gridItemCalendar {
     grid-column: 1 / 2;
-    grid-row: 3 / 4; /* Place Calendar below Health Cards */
+    grid-row: 3 / 4;
     min-width: 0;
   }
 
   .activityFeedRow {
     grid-column: 1 / 2;
-    grid-row: 4 / 5; /* Place Activity Feed at the bottom */
+    grid-row: 4 / 5;
   }
 
   .activityDetails {
@@ -141,7 +142,7 @@
   }
 }
 
-/* Responsive: Mobile (adjust font sizes as before) */
+/* Responsive: Mobile  */
 @media (max-width: 768px) {
   .dashboardTitle {
     font-size: 1.75rem;

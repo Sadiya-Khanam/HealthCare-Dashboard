@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./AnatomySection.module.css"; 
+import styles from "./AnatomySection.module.css";
 import bodyImage from "../../assets/human-anatomy.jpg";
 
 const AnatomySection = () => {
@@ -12,7 +12,7 @@ const AnatomySection = () => {
         <div className={`${styles.label} ${styles.leg}`}>🦵 Healthy Leg</div>
       </div>
 
-      
+
     </div>
   );
 };

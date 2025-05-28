@@ -1,11 +1,7 @@
 import React from 'react';
 import styles from './Sidebar.module.css';
-import {
-  FaChartBar, FaHistory, FaCalendarAlt, FaClipboardList,
-  FaStethoscope, FaUserMd, FaComments, FaQuestionCircle, FaCog
-} from 'react-icons/fa';
+import { FaChartBar, FaHistory, FaCalendarAlt, FaClipboardList, FaStethoscope, FaUserMd, FaComments, FaQuestionCircle, FaCog } from 'react-icons/fa';
 import navigationLinks from '../../data/navigation';
-
 import { Link } from 'react-router-dom';
 
 const iconMap = {
@@ -13,7 +9,7 @@ const iconMap = {
   History: FaHistory,
   Calendar: FaCalendarAlt,
   Appointments: FaClipboardList,
-  Statistics: FaChartBar, // Using ChartBar as a fallback
+  Statistics: FaChartBar,
   Chat: FaComments,
   Support: FaQuestionCircle,
   Setting: FaCog,

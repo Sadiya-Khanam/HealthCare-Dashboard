@@ -1,182 +1,10 @@
-/*.activityContainer {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 20px;
-  width: auto !important;
-  max-width: none !important;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
-.chartHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.chartTitle {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-}
-
-
-.chartSubtitle {
-  font-size: 14px;
-  color: #777;
-}
-
-.barChart {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-down;
-  height: 160px;
-  gap: 10px;
-}
-
-.barWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
-
-.bar {
-  width: 12px;
-  background-color: #4e9af1;
-  border-radius: 6px 6px 0 0;
-  transition: height 0.3s ease;
-  transform-origin: bottom;
-  min-height: 80px;
-}
-
-.dayLabel {
-  font-size: 12px;
-  color: #555;
-  margin-top: 6px;
-}*/
-
-
-
-/*.activityContainer {
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.chartHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
-
-.chartTitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
-}
-
-.chartSubtitle {
-  font-size: 14px;
-  color: #777;
-}
-
-.barChart {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 150px;
-  gap: 12px;
-  width: 100%;
-  flex-wrap: wrap;
-   background-color: #174bb3;
-}
-
-.barWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  min-width: 40px;
-}
-
-.barGroup {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 2px;
-  height: 100%;
-}
-
-.bar {
-  width: 4px;
-  background-color: #4e9af1;
-  border-radius: 2px 2px 0 0;
-  transition: height 0.3s ease;
-  transform-origin: bottom;
-}
-
-.dayLabel {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #555;
-}
-
-.bar {
-  border: 1px solid red;
-  
-  width: 4px;
-  background-color: #a528a3;
-  border-radius: 2px;
-
-
-}
-.barWrapper {
-  border: 1px solid green;
-}
-
-
-/* Responsive adjustments */
-/*@media (max-width: 600px) {
-  .barChart {
-    gap: 8px;
-  }
-
-  .barWrapper {
-    min-width: 32px;
-  }
-
-  .chartTitle {
-    font-size: 14px;
-  }
-
-  .chartSubtitle {
-    font-size: 12px;
-  }
-
-  .bar {
-    width: 3px;
-  }
-}*/
-
-
 .activityContainer {
   background-color: hsl(195, 30%, 90%);
   border-radius: 16px;
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-   width: 100%; /* Make container take full width */
-  box-sizing: border-box; /* Ensure padding doesn't add to width */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .chartHeader {
@@ -189,7 +17,7 @@
 .chartTitle {
   font-size: 18px;
   font-weight: 600;
-  color:black
+  color: black
 }
 
 .chartSubtitle {
@@ -233,7 +61,7 @@
   color: #555;
 }
 
-/* Responsive adjustments for ActivityFeed */
+/* Responsive adjustments  */
 @media (max-width: 600px) {
   .chartTitle {
     font-size: 16px;
@@ -244,15 +72,17 @@
   }
 
   .barChart {
-    gap: 4px; /* Reduce gap between bars */
-    height: 90px; /* Slightly smaller chart */
+    gap: 4px;
+    height: 90px;
   }
 
   .barWrapper {
-    width: 20px; /* Even smaller bars */
+    width: 20px;
+    
   }
 
   .dayLabel {
-    font-size: 10px; /* Smaller labels */
+    font-size: 10px;
+  
   }
 }
