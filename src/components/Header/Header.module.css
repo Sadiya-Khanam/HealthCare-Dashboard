@@ -9,7 +9,7 @@
 .searchContainer {
   position: relative;
   flex: 1; 
-  max-width: 700px; 
+  max-width: 580px; 
   display: flex;
   align-items: center;
   background-color: #ffffff;
@@ -34,7 +34,7 @@
 }
 
 .bellIcon {
-  color: #4e9af1;
+  color: #040c16;
   font-size: 18px;
   margin-left: 12px;
   cursor: pointer;

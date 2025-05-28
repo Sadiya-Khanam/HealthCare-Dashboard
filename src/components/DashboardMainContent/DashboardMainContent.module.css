@@ -3,45 +3,161 @@
   flex-direction: column;
   gap: 24px;
   padding: 24px;
-   width: 100%; 
-}
-
-.anatomyWrapper {
-  display: flex;
-  flex-direction: column;  
-  gap: 16px;
-  flex: 1;
-}
-
-
-/* Top Row: 3 Columns (Anatomy + Health Cards + Calendar) */
-.topRow {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* Middle Row: Activity Feed Full Width BELOW Anatomy + Health */
-.middleRow {
-display: block;
-  
-width: 100% !important;
-
-}
-
-.activityRow {
-   flex-grow: 1; 
-     width: 100% !important;      /* full width */
- 
+  width: 100%;
   box-sizing: border-box;
 }
 
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
 
+.dashboardTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
 
+.mainContentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.2fr; /* 3-column layout */
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  align-items: start;
+}
 
-/* Responsive Fix */
+.gridItemAnatomy {
+  grid-column: 1 / 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: unset;
+  overflow: visible;
+}
+
+.gridItemHealthCards {
+  grid-column: 2 / 3;
+  grid-row: 1 ;
+}
+
+.gridItemCalendar {
+  grid-column: 3 / 4;
+  grid-row: 1 ;
+}
+
+.activityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.activityHeader h2 {
+  color: black;
+  margin: 0;
+}
+
+.activityDetails {
+  text-align: right;
+}
+
+.detailsLink {
+  text-decoration: none;
+  color: #ca76ee;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.detailsArrow {
+  font-size: 0.8rem;
+}
+
+.timePeriod {
+  position: relative;
+}
+
+.timePeriodButton {
+  background-color: transparent;
+  color: #555;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.dropdownIcon {
+  font-size: 0.8rem;
+}
+
+/* Second Row: ActivityFeed */
+.activityFeedRow {
+  grid-column: 1 / 4;
+  grid-row: 2 ;
+}
+
+/* Responsive: Tablet */
 @media (max-width: 1024px) {
-  .topRow {
+  .mainContentGrid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto; /* Ensure enough rows */
+  }
+
+  .gridItemAnatomy {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; /* Explicitly place Anatomy in the first row */
+    min-width: 0; /* Allow it to take full width */
+  }
+
+  .gridItemHealthCards {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3; /* Place Health Cards below Anatomy */
+    min-width: 0;
+    max-width: 100%; /* Allow full width */
+  }
+
+  .gridItemCalendar {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4; /* Place Calendar below Health Cards */
+    min-width: 0;
+  }
+
+  .activityFeedRow {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5; /* Place Activity Feed at the bottom */
+  }
+
+  .activityDetails {
+    text-align: left;
+  }
+}
+
+/* Responsive: Mobile (adjust font sizes as before) */
+@media (max-width: 768px) {
+  .dashboardTitle {
+    font-size: 1.75rem;
+  }
+
+  .timePeriodButton {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardTitle {
+    font-size: 1.5rem;
+  }
+
+  .detailsLink {
+    font-size: 0.85rem;
   }
 }

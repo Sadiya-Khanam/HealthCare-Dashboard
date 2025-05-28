@@ -12,6 +12,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1.2rem;
+  color:black
 }
 
 .dayGroup {
@@ -20,6 +21,7 @@
   gap: 1rem;             /* Space between cards */
   margin-bottom: 1.5rem;
   justify-content: flex-start; /* Align cards to start */
+  
 }
 
 .dayTitle {

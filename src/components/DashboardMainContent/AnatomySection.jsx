@@ -11,6 +11,8 @@ const AnatomySection = () => {
         <div className={`${styles.label} ${styles.heart}`}>❤️ Healthy Heart</div>
         <div className={`${styles.label} ${styles.leg}`}>🦵 Healthy Leg</div>
       </div>
+
+      
     </div>
   );
 };
